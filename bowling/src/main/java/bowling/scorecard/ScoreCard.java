@@ -9,7 +9,7 @@ public class ScoreCard {
 
     public Player recordScore(Player player) {
         int frameNumber = getFrameNumber(player);
-        recordASpare(player);
+        recordASpareOrAStrike(player);
         frameRunningTotal(player);
         updatePlayerTotalScore(player);
         return player;
@@ -25,17 +25,29 @@ public class ScoreCard {
         player.getFrame().get(frameNumber - 1).calculateFrameRunningTotal(previousFrameTotal);
     }
 
-    private void recordASpare(Player player) {
+    private void recordASpareOrAStrike(Player player) {
         int currentFrameNumber = getFrameNumber(player);
 
         if (currentFrameNumber == 1) return;
 
         Frame previousFrame = player.getFrame().get(currentFrameNumber - 2);
 
-        if (previousFrame.getThrow1() + previousFrame.getThrow2() == 10) {
+        if (isAStrike(previousFrame)) {
+            int currentFrameThrow1 = player.getFrame().get(currentFrameNumber - 1).getThrow1();
+            int currentFrameThrow2 = player.getFrame().get(currentFrameNumber - 1).getThrow2();
+            previousFrame.setFrameRunningTotal(previousFrame.getFrameRunningTotal() + currentFrameThrow1 + currentFrameThrow2);
+        } else if (isASpare(previousFrame)) {
             int currentFrameThrow1 = player.getFrame().get(currentFrameNumber - 1).getThrow1();
             previousFrame.setFrameRunningTotal(previousFrame.getFrameRunningTotal() + currentFrameThrow1);
         }
+    }
+
+    private boolean isAStrike(Frame frame) {
+        return frame.getThrow1() == 10;
+    }
+
+    private boolean isASpare(Frame frame) {
+        return frame.getThrow1() + frame.getThrow2() == 10;
     }
 
     private void updatePlayerTotalScore(Player player) {

@@ -1,8 +1,9 @@
 package bowling.scorecard.model;
 
+import lombok.Data;
+
 public class Frame {
     private int frameNumber;
-    //    private String type;//strike or spare
     private int throw1;
     private int throw2;
     private int throw3;
