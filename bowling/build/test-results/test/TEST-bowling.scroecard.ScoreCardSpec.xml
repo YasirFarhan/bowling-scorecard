@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="bowling.scroecard.ScoreCardSpec" tests="27" skipped="0" failures="0" errors="0" timestamp="2020-03-29T19:27:41" hostname="DESKTOP-QS9CCRT" time="0.036">
+<testsuite name="bowling.scroecard.ScoreCardSpec" tests="27" skipped="0" failures="0" errors="0" timestamp="2020-03-29T19:31:29" hostname="DESKTOP-QS9CCRT" time="0.036">
   <properties/>
-  <testcase name="score can be recorded when both balls in a frame scores[0]" classname="bowling.scroecard.ScoreCardSpec" time="0.015"/>
+  <testcase name="score can be recorded when both balls in a frame scores[0]" classname="bowling.scroecard.ScoreCardSpec" time="0.014"/>
   <testcase name="score can be recorded when both balls in a frame scores[1]" classname="bowling.scroecard.ScoreCardSpec" time="0.0"/>
   <testcase name="score can be recorded when both balls in a frame scores[2]" classname="bowling.scroecard.ScoreCardSpec" time="0.0"/>
   <testcase name="score can be recorded when both balls in a frame scores[3]" classname="bowling.scroecard.ScoreCardSpec" time="0.0"/>
@@ -15,18 +15,18 @@
   <testcase name="any frame can be recorded can be independently recorded added[4]" classname="bowling.scroecard.ScoreCardSpec" time="0.0"/>
   <testcase name="any frame can be recorded can be independently recorded added[5]" classname="bowling.scroecard.ScoreCardSpec" time="0.0"/>
   <testcase name="any frame can be recorded can be independently recorded added[6]" classname="bowling.scroecard.ScoreCardSpec" time="0.0"/>
-  <testcase name="frame total can be calculated[0]" classname="bowling.scroecard.ScoreCardSpec" time="0.0"/>
+  <testcase name="frame total can be calculated[0]" classname="bowling.scroecard.ScoreCardSpec" time="0.001"/>
   <testcase name="frame total can be calculated[1]" classname="bowling.scroecard.ScoreCardSpec" time="0.001"/>
   <testcase name="frame total can be calculated[2]" classname="bowling.scroecard.ScoreCardSpec" time="0.0"/>
-  <testcase name="frame total can be calculated[3]" classname="bowling.scroecard.ScoreCardSpec" time="0.0"/>
-  <testcase name="frame total can be calculated[4]" classname="bowling.scroecard.ScoreCardSpec" time="0.001"/>
+  <testcase name="frame total can be calculated[3]" classname="bowling.scroecard.ScoreCardSpec" time="0.001"/>
+  <testcase name="frame total can be calculated[4]" classname="bowling.scroecard.ScoreCardSpec" time="0.0"/>
   <testcase name="frame total can be calculated[5]" classname="bowling.scroecard.ScoreCardSpec" time="0.0"/>
   <testcase name="frame total can be calculated[6]" classname="bowling.scroecard.ScoreCardSpec" time="0.0"/>
   <testcase name="frame total can be calculated[7]" classname="bowling.scroecard.ScoreCardSpec" time="0.0"/>
   <testcase name="total can keep track of all 10 frames | no spares or strikes" classname="bowling.scroecard.ScoreCardSpec" time="0.002"/>
   <testcase name="test spare" classname="bowling.scroecard.ScoreCardSpec" time="0.004"/>
   <testcase name="test strike" classname="bowling.scroecard.ScoreCardSpec" time="0.0"/>
-  <testcase name="test multiple strikes" classname="bowling.scroecard.ScoreCardSpec" time="0.0"/>
+  <testcase name="test multiple strikes" classname="bowling.scroecard.ScoreCardSpec" time="0.001"/>
   <testcase name="test complete game with both spares and strikes" classname="bowling.scroecard.ScoreCardSpec" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

@@ -8,7 +8,6 @@ import org.springframework.stereotype.Component;
 public class ScoreCard {
 
     public Player recordScore(Player player) {
-        int frameNumber = getFrameNumber(player);
         recordASpareOrAStrike(player);
         frameRunningTotal(player);
         updatePlayerTotalScore(player);
@@ -33,12 +32,9 @@ public class ScoreCard {
         Frame previousFrame = player.getFrame().get(currentFrameNumber - 2);
 
         if (isAStrike(previousFrame)) {
-            int currentFrameThrow1 = player.getFrame().get(currentFrameNumber - 1).getThrow1();
-            int currentFrameThrow2 = player.getFrame().get(currentFrameNumber - 1).getThrow2();
-            previousFrame.setFrameRunningTotal(previousFrame.getFrameRunningTotal() + currentFrameThrow1 + currentFrameThrow2);
+            updatePreviousFrameScore(previousFrame,  player.getFrame().get(currentFrameNumber - 1).getThrow1(),  player.getFrame().get(currentFrameNumber - 1).getThrow2());
         } else if (isASpare(previousFrame)) {
-            int currentFrameThrow1 = player.getFrame().get(currentFrameNumber - 1).getThrow1();
-            previousFrame.setFrameRunningTotal(previousFrame.getFrameRunningTotal() + currentFrameThrow1);
+            updatePreviousFrameScore(previousFrame, player.getFrame().get(currentFrameNumber - 1).getThrow1(), 0);
         }
     }
 
@@ -48,6 +44,10 @@ public class ScoreCard {
 
     private boolean isASpare(Frame frame) {
         return frame.getThrow1() + frame.getThrow2() == 10;
+    }
+
+    private void updatePreviousFrameScore(Frame frame, int currentFrameThrow1, int currentFrameThrow2) {
+        frame.setFrameRunningTotal(frame.getFrameRunningTotal() + currentFrameThrow1 + currentFrameThrow2);
     }
 
     private void updatePlayerTotalScore(Player player) {
