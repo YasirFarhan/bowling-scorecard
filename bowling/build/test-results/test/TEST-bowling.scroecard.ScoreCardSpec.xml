@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="bowling.scroecard.ScoreCardSpec" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-03-29T05:46:22" hostname="DESKTOP-QS9CCRT" time="0.089">
+  <properties/>
+  <testcase name="test spare frames" classname="bowling.scroecard.ScoreCardSpec" time="0.089"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
